@@ -32,6 +32,18 @@ dofile(vim.g.base46_cache .. "statusline")
 require "options"
 require "nvchad.autocmds"
 
+require('telescope').setup {
+  defaults = {
+    file_ignore_patterns = {
+      "node_modules",
+      "dist",
+      "server-dist",
+      "coverage"
+    }
+  }
+}
+
+
 vim.schedule(function()
   require "mappings"
 end)

@@ -1,10 +1,25 @@
 require "nvchad.mappings"
 
--- add yours here
-
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
+map("n", "j", "k")
+map("n", "k", "j")
+-- map("i", "jk", "<ESC>")
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- control-s to save and auto format go
+map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+-- gopher mappings
+map("n", "<leader>gsj", "<cmd> GoTagAdd json <cr>") -- Add json struct to tags
+map("n", "<leader>gif", "<cmd> GoIfErr <cr>")       -- Add json struct to tags
+
+-- select all with ctrl-a
+map("n", "<C-a>", "gg0VG")
+
+-- eslint mappings
+map("n", "<leader>jel", "a// eslint-disable-next-line no-console <ESC>")
+
+-- move cursor mappings
+map("n", "H", "^")
+map("n", "L", "$")
