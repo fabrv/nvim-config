@@ -18,8 +18,14 @@ map("n", "<leader>gif", "<cmd> GoIfErr <cr>")       -- Add json struct to tags
 map("n", "<C-a>", "gg0VG")
 
 -- eslint mappings
-map("n", "<leader>jel", "a// eslint-disable-next-line no-console <ESC>")
+map(
+  "n",
+  "<leader>jel", "a// eslint-disable-next-line no-console<ESC>"
+  , { desc = "Disable eslint for next line" }
+)
+map("i", "jel", "// eslint-disable-next-line no-console<cr>")
 
 -- move cursor mappings
 map("n", "H", "^")
 map("n", "L", "$")
+
