@@ -3,8 +3,6 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
-map("n", "j", "k")
-map("n", "k", "j")
 -- map("i", "jk", "<ESC>")
 
 -- control-s to save and auto format go
@@ -23,7 +21,7 @@ map(
   "<leader>jel", "a// eslint-disable-next-line no-console<ESC>"
   , { desc = "Disable eslint for next line" }
 )
-map("i", "jel", "// eslint-disable-next-line no-console<cr>")
+map("i", "jel", "// eslint-disable-next-line no-console")
 
 -- move cursor mappings
 map("n", "H", "^")
