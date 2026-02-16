@@ -7,3 +7,4 @@ vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 
 require("configs.lazy")
+require("commands.eslint")

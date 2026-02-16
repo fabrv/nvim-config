@@ -18,7 +18,7 @@ return {
     {
         "folke/tokyonight.nvim",
         config = function()
-            vim.cmd([[colorscheme tokyonight]])
+            vim.cmd([[colorscheme pastel-light]])
         end
     },
     {
@@ -26,7 +26,8 @@ return {
         opts = {
             ensure_installed = {
                 "typescript-language-server",
-                "rescript-language-server"
+                "rescript-language-server",
+                "fennel-langugae-server",
             }
         }
     },
@@ -42,7 +43,7 @@ return {
               }, 
             }
           })
-          vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
+          vim.diagnostic.config({ virtual_text = false, virtual_lines = false, signs = false }) -- Disable Neovim's default virtual text diagnostics
       end,
     },
     {
@@ -86,6 +87,7 @@ return {
       -- C-k: Toggle signature help (if signature.enabled = true)
       --
       -- See :h blink-cmp-config-keymap for defining your own keymap
+      signature = {enabled = true},
       keymap = {
         preset = 'super-tab',
       },
@@ -112,7 +114,7 @@ return {
       -- See the fuzzy documentation for more information
       fuzzy = { implementation = "prefer_rust_with_warning" }
     },
-    opts_extend = { "sources.default" }
+    opts_extend = { "sources.default" },
   },
 }
 
