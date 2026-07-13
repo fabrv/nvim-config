@@ -32,7 +32,7 @@ return {
             ensure_installed = {
                 "typescript-language-server",
                 "rescript-language-server",
-                "fennel-langugae-server",
+                "fennel-language-server",
             }
         }
     },
