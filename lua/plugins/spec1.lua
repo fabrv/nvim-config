@@ -1,4 +1,9 @@
 return {
+    { "tarides/ocaml.nvim",
+        config = function()
+          require("ocaml").setup()
+        end
+    },
     {"akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons"},
     {"wakatime/vim-wakatime", lazy = false},
     {

@@ -12,3 +12,6 @@ map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- select all with ctrl-a
 map("n", "<C-a>", "gg0VG")
+
+-- go to definition
+map("n", "gd", "<C-]>")
